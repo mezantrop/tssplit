@@ -1,1 +1,1 @@
-from tspli.tsplit import tsplit
+from tsplit.tsplit import tsplit
