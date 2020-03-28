@@ -22,5 +22,6 @@ def tssplit(s, quote='"', delimiter='/', escape='|'):
     result.append(token)
     return result
 
+
 if __name__ == "__main__":
     pass
