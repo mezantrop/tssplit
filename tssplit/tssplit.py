@@ -1,10 +1,11 @@
-def tssplit(s, quote='"', delimiter='/', escape='|'):
+def tssplit(s, quote='"', delimiter=',', escape='|', trim=''):
     """Split a string by delimiters with escaped characters and quotes
 
     :param s: A string to split into chunks
     :param quote: Quote signs to protect a part of s from parsing
     :param delimiter: A chunk separator symbol
     :param escape: An escape character
+    :param trim: Trim characters from chunks
     :return: A list of chunks
     """
 
@@ -23,11 +24,15 @@ def tssplit(s, quote='"', delimiter='/', escape='|'):
         elif c == quote and not in_escape:
             in_quotes = False if in_quotes else True
         elif c == delimiter and not in_quotes:
+            if trim:
+                token = token.strip(trim)
             result.append(token)
             token = ''
         else:
             token += c
 
+    if trim:
+        token = token.strip(trim)
     result.append(token)
     return result
 
