@@ -2,7 +2,7 @@ def tssplit(s, quote='"', delimiter='/', escape='|'):
     """Split a string by delimiters with escaped characters and quotes
 
     :param s: A string to split into chunks
-    :param quote: Quote signs to protect a part of s fro parsing
+    :param quote: Quote signs to protect a part of s from parsing
     :param delimiter: A chunk separator symbol
     :param escape: An escape character
     :return: A list of chunks
