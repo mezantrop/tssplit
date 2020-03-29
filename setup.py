@@ -1,14 +1,19 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='tssplit',
-    version='1.0.1',
+    version='1.0.2',
     py_modules=['tssplit.tssplit'],
     url='https://github.com/mezantrop/tssplit',
     license='bsd-2-clause',
     author='Mikhail Zakharov',
     author_email='zmey20000@yahoo.com',
     description='Trivial split for strings with escaped characters and quotes',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     classifiers=[
         'License :: OSI Approved :: BSD License',
         'Development Status :: 5 - Production/Stable',
