@@ -9,7 +9,7 @@ pip install tssplit
 ```python
 from tssplit import tssplit
 
-tssplit('ooooo/ooo|/ooo"XXX/XXX"ooo/"ooo/ooooo',  quote='"', delimiter='/', escape='|')
+tssplit('ooooo/ooo|/ooo"XXX/XXX"ooo/"ooo/ooooo',  quote='"', delimiter='/', escape='|', trim='')
 ['ooooo', 'ooo/oooXXX/XXXooo', 'ooo/ooooo']
 ```
 
