@@ -1,5 +1,7 @@
 # Trivial split for strings with quotes and escaped characters
 
+[![Downloads](https://pepy.tech/badge/tssplit/month)](https://pepy.tech/project/tssplit)
+
 ## Installation
 ```shell script
 pip install tssplit
