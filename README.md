@@ -15,7 +15,6 @@ pip install tssplit
 ```Python3
 def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim=''):
     """Split a string by delimiters with quotes and escaped characters, optionally trimming results
-
     :param s: A string to split into chunks
     :param quote: Quote chars to protect a part of s from parsing
     :param quote_keep: Preserve quote characters in the output or not
