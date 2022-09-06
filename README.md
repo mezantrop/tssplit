@@ -1,6 +1,7 @@
 # Trivial split for strings with quotes and escaped characters
 
 [![Downloads](https://pepy.tech/badge/tssplit/month)](https://pepy.tech/project/tssplit)
+<a href="https://www.buymeacoffee.com/mezantrop" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Installation
 
