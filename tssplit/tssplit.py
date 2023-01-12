@@ -1,4 +1,4 @@
-def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim=''):
+def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim='', remark='#'):
     """Split a string by delimiters with quotes and escaped characters, optionally trimming results
 
     :param s: A string to split into chunks
@@ -7,6 +7,7 @@ def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim
     :param delimiter: A chunk separator character
     :param escape: An escape character
     :param trim: Trim characters from chunks
+    :param remark: Ignore all characters after remark sign
     :return: A list of chunks
     """
 
@@ -31,6 +32,8 @@ def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim
                 token = token.strip(trim)
             result.append(token)
             token = ''
+        elif c in remark:
+            break
         else:
             token += c
 
