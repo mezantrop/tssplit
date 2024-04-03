@@ -1,4 +1,8 @@
+"""Trivial split for strings with multiple character delimiters, quotes and escaped characters"""
+
 def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim='', remark='#'):
+    # pylint: disable-msg=too-many-locals
+
     """Split a string by delimiters with quotes and escaped characters, optionally trimming results
 
     :param s: A string to split into chunks
@@ -24,7 +28,7 @@ def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim
             if in_quotes:
                 token += c
         elif c in quote and not in_escape:
-            in_quotes = False if in_quotes else True
+            in_quotes = not in_quotes
             if quote_keep:
                 token += c
         elif c in delimiter and not in_quotes:

@@ -33,15 +33,15 @@ def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim
 ```Python3
 from tssplit import tssplit
 
-tssplit('--:--;--,--"--/--"--\'--:--\'--/"--^--', 
+tssplit('--:--;--,--"--/--"--\'--:--\'--/"--^--',
         quote='"\'', delimiter=':;,', escape='/^', trim='')
 ['--', '--', '--', '----/------:----"----']
 
-tssplit('--:--;--,--"--/--"--\'--:--\'--/"--^--', 
+tssplit('--:--;--,--"--/--"--\'--:--\'--/"--^--',
         quote='"\'', delimiter=':;,', escape='/^', trim='', quote_keep=True)
 ['--', '--', '--', '--"--/--"--\'--:--\'--"----']
 
-tssplit('--:--;--,--"--/--"--\'--:--\'--# Ignore this', 
+tssplit('--:--;--,--"--/--"--\'--:--\'--# Ignore this',
         quote='"\'', delimiter=':;,', escape='/^', trim='', quote_keep=True, remark='#')
 ['--', '--', '--', '--"--/--"--\'--:--\'--']
 ```
@@ -53,5 +53,6 @@ tssplit('--:--;--,--"--/--"--\'--:--\'--# Ignore this',
 * 2020.03.29    v1.0.2  Minor fixes, Readme update, Long description provided
 * 2020.03.29    v1.0.3  Trim option to strip() characters from chunks
 * 2020.03.29    v1.0.4  Multiple characters for quotes, delimiters and escapes
-* 2022.02.04    v1.0.5  Added `quote_keep` option to preserve quote marks in the output or not 
+* 2022.02.04    v1.0.5  Added `quote_keep` option to preserve quote marks in the output or not
 * 2023.01.12    v1.0.6  Remark characters interrupt string parsing
+* 2024.04.03    v1.0.7  Cosmetics to make pylint happy
