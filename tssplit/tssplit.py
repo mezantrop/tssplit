@@ -1,5 +1,6 @@
 """Trivial split for strings with multiple character delimiters, quotes and escaped characters"""
 
+
 def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim='', remark='#'):
     """Split a string by delimiters with quotes and escaped characters, optionally trimming results
 
