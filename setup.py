@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='tssplit',
-    version='1.0.7',
+    version='1.0.8',
     py_modules=['tssplit.tssplit'],
     url='https://github.com/mezantrop/tssplit',
     license='bsd-2-clause',
@@ -28,5 +28,4 @@ setup(
         'Topic :: Text Processing :: General'
     ],
     keywords=['split', 'parse', 'quote', 'trim', 'strip', 'string', 'delimiter', 'separator'],
-
 )
