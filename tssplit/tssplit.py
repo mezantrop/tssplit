@@ -1,7 +1,7 @@
 """Trivial split for strings with multiple character delimiters, quotes and escaped characters"""
 
 
-def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim='', remark='#'):
+def tssplit(s:str, quote:str='"\'', quote_keep:bool=False, delimiter:str=':;,', escape:str='/^', trim:str='', remark:str='#') -> list[str]:
     """Split a string by delimiters with quotes and escaped characters, optionally trimming results
 
     :param s: A string to split into chunks
@@ -16,7 +16,7 @@ def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim
 
     in_quotes = in_escape = False
     token = ''
-    result = []
+    result:list[str] = []
 
     for c in s:
         if in_escape:

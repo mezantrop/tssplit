@@ -1,6 +1,6 @@
 """Trivial split for strings with multiple character delimiters, quotes and escaped characters"""
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -28,4 +28,6 @@ setup(
         'Topic :: Text Processing :: General'
     ],
     keywords=['split', 'parse', 'quote', 'trim', 'strip', 'string', 'delimiter', 'separator'],
+    packages=find_packages(include=['tssplit']),
+    package_data={"tssplit": ["py.typed"]},
 )
