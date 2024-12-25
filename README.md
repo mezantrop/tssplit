@@ -14,7 +14,9 @@ pip install tssplit
 ### Syntax
 
 ```Python3
-def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim='', remark='#'):
+def tssplit(s:str, quote:str='"\'', quote_keep:bool=False, delimiter:str=':;,', escape:str='/^', trim:str='',
+            remark:str='#') -> list[str]:
+
     """Split a string by delimiters with quotes and escaped characters, optionally trimming results
 
     :param s: A string to split into chunks
@@ -31,7 +33,7 @@ def tssplit(s, quote='"\'', quote_keep=False, delimiter=':;,', escape='/^', trim
 ### Example
 
 ```Python3
-from tssplit import tssplit
+import tssplit
 
 tssplit('--:--;--,--"--/--"--\'--:--\'--/"--^--',
         quote='"\'', delimiter=':;,', escape='/^', trim='')
