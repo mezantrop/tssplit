@@ -57,3 +57,4 @@ tssplit('--:--;--,--"--/--"--\'--:--\'--# Ignore this',
 * 2023.01.12    v1.0.6  Remark characters interrupt string parsing
 * 2024.04.03    v1.0.7  Cosmetics to make pylint happy
 * 2024.10.19    v1.0.8  Better module import; minor cosmetic changes
+* 2024.12.25    v1.0.9  Type annotations by @mkupferman + misc minor changes
